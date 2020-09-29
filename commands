@@ -1,0 +1,66 @@
+    1  pwd
+    2  vim /root/.terraform.d/credentials.tfrc.json 
+    3  pw
+    4  pwd
+    5  terraform init
+    6  terraform apply
+    7  terraform plan
+    8  terraform -var-file=terraform.tfvars apply
+    9  ll
+   10  cat terraform.tfvars
+   11  terraform init
+   12  terraform apply
+   13  cat terraform.tfvars
+   14  env
+   15  terraform apply
+   16  env
+   17  terraform apply
+   18  terraform init
+   19  terraform apply
+   20  env | grep AWS
+   21  terraform init
+   22  terraform apply
+   23  igit remote remove origin
+   24  git remote remove origin
+   25  git remote add origin https://github.com/miroadamy/hashicat-aws
+   26  git config --global user.email "miro.adamy@gmail.com"
+   27  git config --global user.name "Miro Adamy"
+   28  git status
+   29  git add remote_backend.tf 
+   30  git commit -m "Adding remote + backen"
+   31  git push origin master
+   32  git status
+   33  git checkout files/deploy_app.sh 
+   34  git status
+   35  git pull
+   36  git pull origin master
+   37  cat files/deploy_app.sh 
+   38  git status
+   39  git add -u
+   40  git commit -m "Added first tag"
+   41  git push -u origin master
+   42  git add -u
+   43  git commit -m "Added second tag"
+   44  git push -u origin master
+   45  git pull
+   46  git status
+   47  git add vpc.tf 
+   48  git commit -m "Added vpc"
+   49  git push
+   50  git add -u
+   51  git commit -m "Fixed tag, using latest version"
+   52  git push
+   53  git status
+   54  git add -u
+   55  git commit -m "Added CIDR"
+   56  git push
+   57  export TOKEN=$(grep token /root/.terraform.d/credentials.tfrc.json | cut -d '"' -f4)
+   58  export ORG=miroadamy-training
+   59  curl -s --header "Authorization: Bearer $TOKEN" --header "Content-Type: application/vnd.api+json"   https://app.terraform.io/api/v2/organizations/$ORG/workspaces/hashicat-aws | jq -r .data.id
+   60  ll
+   61  curl --header "Authorization: Bearer $TOKEN" --header "Content-Type: application/vnd.api+json" --request POST   --data @payload.json   https://app.terraform.io/api/v2/workspaces/ws-hdYurVKp9NZPHc6T/vars
+   62  curl --header "Authorization: Bearer $TOKEN" --header "Content-Type: application/vnd.api+json" --request POST   --data @apply.json   https://app.terraform.io/api/v2/workspaces/ws-hdYurVKp9NZPHc6T/vars
+   63  curl --header "Authorization: Bearer $TOKEN" --header "Content-Type: application/vnd.api+json" --request POST   --data @var-width.json   https://app.terraform.io/api/v2/workspaces/ws-hdYurVKp9NZPHc6T/vars
+   64  curl --header "Authorization: Bearer $TOKEN" --header "Content-Type: application/vnd.api+json" --request POST   --data @var-height.json   https://app.terraform.io/api/v2/workspaces/ws-hdYurVKp9NZPHc6T/vars
+   65  curl --header "Authorization: Bearer $TOKEN" --header "Content-Type: application/vnd.api+json" --request POST   --data @var-placeholder.json   https://app.terraform.io/api/v2/workspaces/ws-hdYurVKp9NZPHc6T/vars
+   66  history >../commands
